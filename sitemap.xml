@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- English Pages -->
+    <url>
+        <loc>https://nomadx.life/</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://nomadx.life/ko/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nomadx.life/"/>
+    </url>
+    
+    <url>
+        <loc>https://nomadx.life/our-story.html</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://nomadx.life/ko/our-story.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nomadx.life/our-story.html"/>
+    </url>
+    
+    <url>
+        <loc>https://nomadx.life/the-playground.html</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://nomadx.life/ko/the-playground.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nomadx.life/the-playground.html"/>
+    </url>
+    
+    <url>
+        <loc>https://nomadx.life/partner-with-us.html</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://nomadx.life/ko/partner-with-us.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nomadx.life/partner-with-us.html"/>
+    </url>
+    
+    <url>
+        <loc>https://nomadx.life/invest-collaborate.html</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://nomadx.life/ko/invest-collaborate.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nomadx.life/invest-collaborate.html"/>
+    </url>
+    
+    <!-- Korean Pages -->
+    <url>
+        <loc>https://nomadx.life/ko/</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nomadx.life/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://nomadx.life/ko/"/>
+    </url>
+    
+    <url>
+        <loc>https://nomadx.life/ko/our-story.html</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nomadx.life/our-story.html"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://nomadx.life/ko/our-story.html"/>
+    </url>
+    
+    <url>
+        <loc>https://nomadx.life/ko/the-playground.html</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nomadx.life/the-playground.html"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://nomadx.life/ko/the-playground.html"/>
+    </url>
+    
+    <url>
+        <loc>https://nomadx.life/ko/partner-with-us.html</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nomadx.life/partner-with-us.html"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://nomadx.life/ko/partner-with-us.html"/>
+    </url>
+    
+    <url>
+        <loc>https://nomadx.life/ko/invest-collaborate.html</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nomadx.life/invest-collaborate.html"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://nomadx.life/ko/invest-collaborate.html"/>
+    </url>
+    
+</urlset>

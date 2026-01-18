@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | NOMADX</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+        .error-content {
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #666666 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .error-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        .error-description {
+            font-size: 1.1rem;
+            color: #999999;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .error-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            .error-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <h1 class="error-code">404</h1>
+            <h2 class="error-title">Page Not Found</h2>
+            <p class="error-description">
+                The page you're looking for doesn't exist or has been moved. 
+                Let's get you back on track.
+            </p>
+            <div class="error-buttons">
+                <a href="/" class="btn-learn-more">
+                    <span>GO HOME</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="/the-playground.html" class="btn-learn-more" style="background: transparent; border: 1px solid rgba(255,255,255,0.2);">
+                    <span>EXPLORE</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

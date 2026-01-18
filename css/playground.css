@@ -1,0 +1,762 @@
+/* ===================================
+   THE PLAYGROUND - Specific Styles
+   =================================== */
+
+/* Override subpage hero to avoid side-nav overlap */
+.subpage-hero {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    /* Push content to the right of side-nav */
+    padding-left: max(calc(250px + 6rem), calc(50% - 700px + 250px + 6rem)) !important;
+    padding-right: 3rem !important;
+    max-width: 100% !important;
+}
+
+.subpage-hero-title {
+    max-width: 900px;
+}
+
+.subpage-hero-intro {
+    max-width: 700px;
+}
+
+/* Playground Tabs - Using FIXED position for guaranteed stickiness */
+.playground-tabs {
+    background-color: rgba(0, 0, 0, 0.98);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed !important;
+    top: var(--nav-height) !important;
+    left: 0;
+    right: 0;
+    /* 메인 네비(1000)보다 낮지만 충분히 높게 - 데스크톱 */
+    z-index: 999 !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+.tab-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    position: relative;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-btn:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.tab-btn.active {
+    color: var(--color-white);
+    border-bottom-color: var(--color-white);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.tab-content.active {
+    display: block !important;
+    animation: fadeIn 0.5s ease-in-out;
+    padding-top: calc(var(--tabs-height) + 2rem);
+    margin-top: 0;
+    padding-left: max(calc(250px + 6rem), calc(50% - 700px + 250px + 6rem));
+    padding-right: max(3rem, calc(50% - 700px + 3rem));
+    padding-bottom: 5rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    /* Ensure enough height for sticky/fixed to work */
+    min-height: calc(100vh + 500px);
+}
+
+/* Override .subpage-content padding for THE PLAYGROUND page */
+.subpage-content {
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow: visible !important;
+}
+
+/* Side Navigation - Using FIXED position for reliable stickiness */
+.side-nav {
+    position: fixed !important;
+    top: calc(var(--nav-height) + var(--tabs-height) + 20px) !important;
+    left: max(3rem, calc(50% - 700px + 3rem));  /* Responsive left position */
+    width: 250px;
+    background-color: rgba(0, 0, 0, 1) !important;  /* Completely opaque - no background text showing through */
+    padding: 2rem 1.5rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.4);
+    height: fit-content;
+    max-height: calc(100vh - var(--nav-height) - var(--tabs-height) - 40px);
+    overflow-y: auto;
+    margin-top: 0;
+    z-index: 90;
+}
+
+.side-nav h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav li {
+    margin-bottom: 0.75rem;
+}
+
+.side-nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    display: block;
+    padding: 0.5rem 0;
+    transition: var(--transition-smooth);
+    border-left: 2px solid transparent;
+    padding-left: 1rem;
+    margin-left: -1rem;
+}
+
+.side-nav a:hover {
+    color: var(--color-white);
+    border-left-color: var(--color-white);
+}
+
+.side-nav a.active-item {
+    color: var(--color-white);
+    border-left-color: var(--color-white);
+    font-weight: 600;
+}
+
+/* Custom scrollbar for side-nav */
+.side-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.side-nav::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+}
+
+.side-nav::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+.side-nav::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.tab-main-content {
+    min-width: 0;
+    min-height: calc(100vh - var(--nav-height) - var(--tabs-height));
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Playground Items */
+.playground-item {
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Item Hero Image */
+.item-hero-image {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    filter: grayscale(100%);
+    opacity: 0.85;
+}
+
+.item-hero-image:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+
+/* Video Container - Responsive 16:9 Aspect Ratio */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    padding-bottom: 50.625%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.playground-item:last-child {
+    border-bottom: none;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 900px;
+}
+
+.item-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.external-link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--color-white);
+    transition: var(--transition-smooth);
+}
+
+.external-link:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    transform: translateX(5px);
+}
+
+.coming-badge {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.coming-soon {
+    opacity: 0.9;
+}
+
+/* Item Tagline */
+.item-tagline {
+    margin-bottom: 2.5rem;
+}
+
+.item-tagline h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.item-tagline .subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 300;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Item Content */
+.item-content {
+    max-width: 900px;
+}
+
+.item-content p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.item-content h4 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.item-content strong {
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+/* Feature Lists */
+.feature-list {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.feature-list > li {
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.feature-list > li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.feature-list li strong {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+/* Numbered Lists */
+.numbered-list {
+    counter-reset: item;
+    list-style: none;
+    margin: 2rem 0;
+    padding-left: 0;
+}
+
+.numbered-list > li {
+    counter-increment: item;
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+    position: relative;
+}
+
+.numbered-list > li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 900;
+    font-size: 2rem;
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.numbered-list li strong {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Why Section */
+.why-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    margin: 3rem 0;
+    border-left: 3px solid var(--color-white);
+}
+
+.why-section h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.why-section ul {
+    list-style: none;
+    margin: 0;
+}
+
+.why-section li {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.why-section li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+}
+
+/* CTA Text */
+.cta-text {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    margin-top: 3rem !important;
+    opacity: 1 !important;
+    font-style: italic;
+}
+
+/* Bottom CTA Button */
+.bottom-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: var(--transition-smooth);
+}
+
+.bottom-cta-link:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Reset subpage hero padding for tablet/mobile */
+    .subpage-hero {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+        max-width: 1400px !important;
+    }
+    
+    .tab-content.active {
+        display: block !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    
+    .side-nav {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 138px;
+        left: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        padding: 0.75rem 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        z-index: 90;
+        background-color: rgba(0, 0, 0, 1) !important;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .tab-main-content {
+        padding-top: 2rem;
+    }
+    
+    .side-nav::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .side-nav::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .side-nav::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 2px;
+    }
+    
+    .side-nav h3 {
+        display: none;
+    }
+    
+    .side-nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        padding: 0 1.5rem;
+        min-width: min-content;
+    }
+    
+    .side-nav li {
+        margin-bottom: 0;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+    
+    .side-nav a {
+        padding: 0.75rem 1.25rem;
+        margin: 0;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+    }
+    
+    .side-nav a.active-item,
+    .side-nav a:hover {
+        border-left: none;
+        border-bottom-color: var(--color-white);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Reset subpage hero padding for mobile */
+    .subpage-hero {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        /* 메인 네비(88px) + 가로 탭(~150px) + 여유 최소화(0px) */
+        padding-top: 238px !important;
+        padding-bottom: 1rem !important;
+        max-width: 100% !important;
+    }
+    
+    .playground-tabs {
+        position: fixed !important;
+        top: var(--nav-height) !important;
+        left: 0;
+        right: 0;
+        /* 메인 네비(1000)보다 낮지만 충분히 높게 설정 */
+        z-index: 999 !important;
+        background-color: rgba(0, 0, 0, 1) !important;
+        width: 100%;
+        /* 하단 테두리 제거하여 세로 네비와 매끄럽게 연결 */
+        border-bottom: none;
+    }
+    
+    .tab-container {
+        padding: 1rem 1.5rem;
+        /* 가로 배치로 전체 보이게 */
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 0;
+        justify-content: flex-start;
+    }
+    
+    .tab-btn {
+        /* 한 줄에 다 보이도록 크기 조정 */
+        width: auto;
+        flex: 0 0 auto;
+        text-align: center;
+        padding: 0.6rem 0.8rem;
+        border-bottom: 2px solid transparent;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+    
+    .tab-btn.active {
+        border-left: none;
+        border-bottom-color: var(--color-white);
+        color: var(--color-white);
+    }
+    
+    .tab-content.active {
+        display: block !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        /* 세로 네비 아래부터: 히어로(238px) + 세로 네비(가로 스크롤 ~40px) + 여유(8px) = 286px */
+        padding-top: 286px !important;
+    }
+    
+    .tab-main-content {
+        padding-top: 1rem;
+    }
+    
+    .side-nav {
+        position: fixed !important;
+        /* 가로 탭 바로 아래에 붙여서 공백 제거 */
+        top: 238px !important;
+        left: 0 !important;
+        width: 100vw !important;
+        max-width: 100% !important;
+        margin-bottom: 0;
+        /* 가로 탭(999)보다 낮게 설정 */
+        z-index: 90 !important;
+        margin-top: 0;
+        padding: 0.6rem 1.5rem !important;
+        background-color: rgba(0, 0, 0, 1) !important;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+        /* 공백 제거를 위한 상단 테두리 */
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        /* 가로 스크롤 활성화 */
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    
+    /* 세로 네비 제목 표시 */
+    .side-nav h3 {
+        display: block;
+        font-size: 0.65rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* 세로 네비 리스트 가로 배치 (스크롤 가능) */
+    .side-nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+    }
+    
+    /* 세로 네비 항목 */
+    .side-nav li {
+        margin-bottom: 0;
+    }
+    
+    /* 세로 네비 링크 - 폰트 크기 축소로 3개씩 표시 */
+    .side-nav a {
+        padding: 0.4rem 0.6rem !important;
+        font-size: 0.65rem !important;
+        white-space: nowrap;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .side-nav a.active-item {
+        background-color: rgba(255, 255, 255, 0.15);
+        border-color: var(--color-white);
+    }
+    
+    /* 세로 네비 스크롤바 스타일 */
+    .side-nav::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .side-nav::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .side-nav::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 2px;
+    }
+    
+    .side-nav::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .item-hero-image {
+        height: 250px;
+        margin-bottom: 2rem;
+    }
+    
+    .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .external-link {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .bottom-cta-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .playground-item {
+        margin-bottom: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .why-section {
+        padding: 1.5rem;
+    }
+    
+    .feature-list > li,
+    .numbered-list > li {
+        padding-left: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .playground-tabs,
+    .main-nav,
+    .main-footer {
+        display: none;
+    }
+    
+    .tab-content {
+        display: block !important;
+    }
+    
+    .item-content {
+        page-break-inside: avoid;
+    }
+}

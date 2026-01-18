@@ -1,0 +1,13 @@
+# robots.txt for NOMADX
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://nomadx.life/sitemap.xml
+
+# Crawl-delay (optional)
+Crawl-delay: 0
