@@ -1,4 +1,5 @@
-# NOMADX Website
+# NOMADX Website (Sync Test)
+<!-- repository updated to NOMADX-Global -->
 
 **Building a Lightweight Civilization**
 
