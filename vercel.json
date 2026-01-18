@@ -3,21 +3,6 @@
   "name": "nomadx-website",
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
-    {
-      "src": "/ko",
-      "dest": "/ko/index.html"
-    },
-    {
-      "src": "/index.html",
-      "dest": "/",
-      "status": 301
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -78,6 +63,12 @@
       "source": "/ko/index.html",
       "destination": "/ko/",
       "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/ko",
+      "destination": "/ko/index.html"
     }
   ]
 }
