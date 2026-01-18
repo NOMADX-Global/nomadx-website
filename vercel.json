@@ -1,20 +1,8 @@
 {
   "version": 2,
-  "name": "nomadx",
-  "builds": [
-    {
-      "src": "**/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "css/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "js/**",
-      "use": "@vercel/static"
-    }
-  ],
+  "name": "nomadx-website",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
     {
       "src": "/ko",
@@ -91,7 +79,5 @@
       "destination": "/ko/",
       "permanent": true
     }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  ]
 }
