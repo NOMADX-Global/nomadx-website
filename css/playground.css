@@ -1,5 +1,6 @@
 /* ===================================
    THE PLAYGROUND - Specific Styles
+   (Updated: 2026-01-19)
    =================================== */
 
 /* Override subpage hero to avoid side-nav overlap */
@@ -103,9 +104,11 @@
 .side-nav {
     position: fixed !important;
     top: calc(var(--nav-height) + var(--tabs-height) + 20px) !important;
-    left: max(3rem, calc(50% - 700px + 3rem));  /* Responsive left position */
+    left: max(3rem, calc(50% - 700px + 3rem));
+    /* Responsive left position */
     width: 250px;
-    background-color: rgba(0, 0, 0, 1) !important;  /* Completely opaque - no background text showing through */
+    background-color: rgba(0, 0, 0, 1) !important;
+    /* Completely opaque - no background text showing through */
     padding: 2rem 1.5rem;
     border-left: 2px solid rgba(255, 255, 255, 0.15);
     border-right: 1px solid rgba(255, 255, 255, 0.05);
@@ -191,6 +194,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -227,7 +231,8 @@
     position: relative;
     width: 100%;
     max-width: 900px;
-    padding-bottom: 50.625%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    padding-bottom: 50.625%;
+    /* 16:9 aspect ratio (9/16 = 0.5625) */
     height: 0;
     overflow: hidden;
     margin-bottom: 3rem;
@@ -351,7 +356,7 @@
     margin: 2rem 0;
 }
 
-.feature-list > li {
+.feature-list>li {
     font-size: 1.05rem;
     font-weight: 300;
     line-height: 1.7;
@@ -360,7 +365,7 @@
     position: relative;
 }
 
-.feature-list > li::before {
+.feature-list>li::before {
     content: '→';
     position: absolute;
     left: 0;
@@ -382,7 +387,7 @@
     padding-left: 0;
 }
 
-.numbered-list > li {
+.numbered-list>li {
     counter-increment: item;
     font-size: 1.05rem;
     font-weight: 300;
@@ -392,7 +397,7 @@
     position: relative;
 }
 
-.numbered-list > li::before {
+.numbered-list>li::before {
     content: counter(item);
     position: absolute;
     left: 0;
@@ -479,19 +484,20 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+
     /* Reset subpage hero padding for tablet/mobile */
     .subpage-hero {
         padding-left: 3rem !important;
         padding-right: 3rem !important;
         max-width: 1400px !important;
     }
-    
+
     .tab-content.active {
         display: block !important;
         padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
     }
-    
+
     .side-nav {
         position: -webkit-sticky;
         position: sticky;
@@ -514,28 +520,28 @@
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
     }
-    
+
     .tab-main-content {
         padding-top: 2rem;
     }
-    
+
     .side-nav::-webkit-scrollbar {
         height: 4px;
     }
-    
+
     .side-nav::-webkit-scrollbar-track {
         background: rgba(255, 255, 255, 0.05);
     }
-    
+
     .side-nav::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.2);
         border-radius: 2px;
     }
-    
+
     .side-nav h3 {
         display: none;
     }
-    
+
     .side-nav ul {
         display: flex;
         flex-wrap: nowrap;
@@ -544,13 +550,13 @@
         padding: 0 1.5rem;
         min-width: min-content;
     }
-    
+
     .side-nav li {
         margin-bottom: 0;
         flex-shrink: 0;
         scroll-snap-align: start;
     }
-    
+
     .side-nav a {
         padding: 0.75rem 1.25rem;
         margin: 0;
@@ -562,7 +568,7 @@
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 4px;
     }
-    
+
     .side-nav a.active-item,
     .side-nav a:hover {
         border-left: none;
@@ -571,6 +577,7 @@
 }
 
 @media (max-width: 768px) {
+
     /* Reset subpage hero padding for mobile */
     .subpage-hero {
         padding-left: 1.5rem !important;
@@ -580,7 +587,7 @@
         padding-bottom: 1rem !important;
         max-width: 100% !important;
     }
-    
+
     .playground-tabs {
         position: fixed !important;
         top: var(--nav-height) !important;
@@ -593,7 +600,7 @@
         /* 하단 테두리 제거하여 세로 네비와 매끄럽게 연결 */
         border-bottom: none;
     }
-    
+
     .tab-container {
         padding: 1rem 1.5rem;
         /* 가로 배치로 전체 보이게 */
@@ -603,7 +610,7 @@
         margin-bottom: 0;
         justify-content: flex-start;
     }
-    
+
     .tab-btn {
         /* 한 줄에 다 보이도록 크기 조정 */
         width: auto;
@@ -614,13 +621,13 @@
         font-size: 0.75rem;
         white-space: nowrap;
     }
-    
+
     .tab-btn.active {
         border-left: none;
         border-bottom-color: var(--color-white);
         color: var(--color-white);
     }
-    
+
     .tab-content.active {
         display: block !important;
         padding-left: 1.5rem !important;
@@ -628,11 +635,11 @@
         /* 세로 네비 아래부터: 히어로(238px) + 세로 네비(가로 스크롤 ~40px) + 여유(8px) = 286px */
         padding-top: 286px !important;
     }
-    
+
     .tab-main-content {
         padding-top: 1rem;
     }
-    
+
     .side-nav {
         position: fixed !important;
         /* 가로 탭 바로 아래에 붙여서 공백 제거 */
@@ -655,14 +662,14 @@
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
     }
-    
+
     /* 세로 네비 제목 표시 */
     .side-nav h3 {
         display: block;
         font-size: 0.65rem;
         margin-bottom: 0.5rem;
     }
-    
+
     /* 세로 네비 리스트 가로 배치 (스크롤 가능) */
     .side-nav ul {
         display: flex;
@@ -670,12 +677,12 @@
         gap: 0.5rem;
         flex-wrap: nowrap;
     }
-    
+
     /* 세로 네비 항목 */
     .side-nav li {
         margin-bottom: 0;
     }
-    
+
     /* 세로 네비 링크 - 폰트 크기 축소로 3개씩 표시 */
     .side-nav a {
         padding: 0.4rem 0.6rem !important;
@@ -685,77 +692,78 @@
         border-radius: 4px;
         background-color: rgba(255, 255, 255, 0.05);
     }
-    
+
     .side-nav a.active-item {
         background-color: rgba(255, 255, 255, 0.15);
         border-color: var(--color-white);
     }
-    
+
     /* 세로 네비 스크롤바 스타일 */
     .side-nav::-webkit-scrollbar {
         height: 4px;
     }
-    
+
     .side-nav::-webkit-scrollbar-track {
         background: rgba(255, 255, 255, 0.05);
     }
-    
+
     .side-nav::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.2);
         border-radius: 2px;
     }
-    
+
     .side-nav::-webkit-scrollbar-thumb:hover {
         background: rgba(255, 255, 255, 0.3);
     }
-    
+
     .item-hero-image {
         height: 250px;
         margin-bottom: 2rem;
     }
-    
+
     .item-header {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .external-link {
         font-size: 0.9rem;
         padding: 0.6rem 1.2rem;
     }
-    
+
     .bottom-cta-link {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
     }
-    
+
     .playground-item {
         margin-bottom: 3rem;
         padding-bottom: 3rem;
     }
-    
+
     .why-section {
         padding: 1.5rem;
     }
-    
-    .feature-list > li,
-    .numbered-list > li {
+
+    .feature-list>li,
+    .numbered-list>li {
         padding-left: 1.5rem;
     }
 }
 
 /* Print Styles */
 @media print {
+
     .playground-tabs,
     .main-nav,
     .main-footer {
         display: none;
     }
-    
+
     .tab-content {
         display: block !important;
     }
-    
+
     .item-content {
         page-break-inside: avoid;
     }
