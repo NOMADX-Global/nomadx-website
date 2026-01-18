@@ -1,5 +1,6 @@
 # NOMADX Website (Sync Test)
 <!-- repository updated to NOMADX-Global -->
+<!-- last commit check: 2026-01-18 -->
 
 **Building a Lightweight Civilization**
 
